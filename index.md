@@ -15,6 +15,7 @@ Container orchestration management tools for docker swarm mode.
 ```bash
 npm install orcinus -g
 ```
+
 #### Standalone binary
 
 ```bash
@@ -35,6 +36,7 @@ chmod +x /usr/bin/orcinus
 ### Setup manager
 * SSH into the machine and become **root** if you are not already (for example, run `sudo su -`).
 * Initializing your machine as manager.
+
 ```bash
 [root@192.168.7.11 ~]$ orcinus cluster init [IP ADDRESS MACHINE]
 [root@192.168.7.11 ~]$ orcinus cluster init 192.168.7.11
@@ -52,6 +54,7 @@ Add a worker to this manager.
 If you want to add any new machines as worker to your cluster, for each machine:
 * SSH into the machine and become **root** if you are not already (for example, run `sudo su -`).
 * Initializing your machine as a worker.
+
 ```bash
 [root@192.168.7.12 ~]$ orcinus cluster join [TOKEN]
 [root@192.168.7.12 ~]$ orcinus cluster join eyJhZGRyIjoiMTkyLjE2OC43LjExOjIzNzciLCJ0b2tlbiI6IlNXTVRLTi0xLTVqbmZ3b3ltbW1haW5nb3poNnh2Y3ZreDA0N3NlOTJrYmF2dXlscTlkbDF5b3czcWliLTUzM2dwbjN4b2lxeWJkOHN2NXl2bzg2anFcbiJ9
@@ -61,6 +64,7 @@ This node joined a cluster as a worker.
 ### Get all nodes information
 Get information all nodes cluster.
 * SSH into the manager machine and become **root** if you are not already (for example, run `sudo su -`).
+
 ```bash
 [root@192.168.7.11 ~]$ orcinus cluster ls
 ID                           HOSTNAME  STATUS  AVAILABILITY  MANAGER STATUS
@@ -92,6 +96,7 @@ Engine Version:		1.12.3
 
 ### Deploy Services
 Deploy your first service.
+
 ```bash
 # orcinus compose
 [root@192.168.7.11 ~]$ mkdir test/
